@@ -42,7 +42,6 @@ resource "aws_elb" "dan_elb" {
 }
 output "addresses" {
 	value = aws_instance.dan_terraform_example.*.public_ip
-	//value = ["${aws_elb.dan_elb.dns_name}"]
 }
 output "elb" {
 	value = aws_elb.dan_elb.dns_name
