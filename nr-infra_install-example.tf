@@ -11,7 +11,7 @@ resource "aws_instance" "dan_terraform_example" {
         instance_type = "t2.micro"
         availability_zone = element(var.azs, count.index)
         key_name = "ec2"
-        security_groups= ["yooo-8968"]
+        security_groups= ["someSecurityGroup]
         count = 3
 	tags ={
         Name = "NewRelic Web server ${count.index+1}"
